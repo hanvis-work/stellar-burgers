@@ -40,8 +40,11 @@ export const BurgerConstructor: FC = () => {
         constructorItems.bun._id
       ];
 
-      dispatch(newOrder(newBurgerItems));
-      dispatch(clearIngredients());
+      dispatch(newOrder(newBurgerItems))
+        .then(() => dispatch(clearIngredients()))
+        .catch((error) => {
+          console.error(error);
+        });
     } catch (error) {
       console.error(error);
     }
