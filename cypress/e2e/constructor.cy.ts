@@ -83,7 +83,7 @@ describe('Интеграционные тесты для страницы кон
       cy.contains('button', 'Оформить заказ').click();
       cy.wait('@newOrder');
       cy.get('#modals').should('not.be.empty');
-      cy.get('#modals').find('h2').contains('777').should('exist');
+      cy.get('#modals').find('h2').contains('123').should('exist');
       cy.get('#modals').find('button').click();
       cy.get('#modals').should('be.empty');
       cy.get('div').contains('Выберите булки').should('exist');
