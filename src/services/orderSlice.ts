@@ -10,7 +10,7 @@ interface OrderState {
   orderRequest: boolean;
 }
 
-const initialState: OrderState = {
+export const initialState: OrderState = {
   ordersList: [],
   orderData: null,
   loading: false,
